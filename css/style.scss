@@ -1,0 +1,265 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFFFF;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='624' height='624' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2398BAFF' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23555255'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+// les couleur 
+$blueDenki1: #0066CC;
+$orangeDenki: #9400B4;
+$orangeDenki2: #F19338;
+$blueDenki2: #4621FE;
+.focus{
+    color: $orangeDenki;
+}
+//font
+h1{
+    font-size: 1.4em;
+    font-weight: 600;
+}
+h2{
+    font-size :3rem;
+    font-weight: 800;
+    text-shadow: 2px 0 0 #ffff, -2px 0 0 #ffff, 0 2px 0 #ffff, 0 -2px 0 #ffff, 1px 1px #ffff, -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff;
+}
+p{
+    font-size: 1.6em;
+    font-weight: 600;
+    text-shadow: 2px 0 0 #ffff, -2px 0 0 #ffff, 0 2px 0 #ffff, 0 -2px 0 #ffff, 1px 1px #ffff, -1px -1px 0 #ffff, 1px -1px 0 #ffff, -1px 1px 0 #ffff;
+}
+
+.mt{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.btnUp{
+    height: 50px;
+    width: 50px;
+    background: #3498DB;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 6;
+}
+// La navigation
+.logo-Nav{
+    width: 50%;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: $blueDenki1;
+    & :hover{
+        color: $orangeDenki;
+        transition-duration: 400ms;
+    }
+}
+.bg-denki{
+    background-image: url('../img/DENKIDOMO_FondBleu10_Comm_lignes_Ai.png');
+}
+.gap{
+    gap: 10%;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.boder-Bot{
+    border-bottom: solid 1px rgba(0, 0, 0, 0.185);
+}
+i{
+    color: $blueDenki1;
+}
+li :hover i{
+    color: $orangeDenki2;
+    scale: 1.2;
+    transition-duration: 400ms;
+}
+
+@media screen and (max-width: 800px) {//version mobil
+    .logo-Nav{
+        width: 100%;
+    }
+
+}
+
+// La navigation animation
+
+.nav-apparition{
+    animation: apparition 1000ms;
+}
+@keyframes apparition {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+.banniere{
+    width: 100%;
+    height: 45vh;
+    background-image: url('../img/Denki_fond_1309_933_source-avec-ai_3.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    margin-bottom: 3vmin;
+}
+
+.img-Picto{
+    min-width: 5%;
+    padding-top: 10px;
+    
+}
+
+
+.img-picto-group{
+    display: flex;
+    gap: 50px;
+    margin-left: 2%;
+    margin-top: 10px;
+
+}
+.img-picto-group :nth-child(1){
+    animation:  apparition-Picto 500ms both;
+}
+.img-picto-group :nth-child(2){
+    animation:  apparition-Picto2 500ms both;
+    animation-delay: 500ms;
+}
+.img-picto-group :nth-child(3){
+    animation:  apparition-Picto2 500ms both;
+    animation-delay: 1500ms;
+}
+.img-picto-group :nth-child(4){
+    animation:  apparition-Picto2 500ms both;
+    animation-delay: 2000ms;
+}
+.img-picto-group :nth-child(odd){
+
+    position: relative;
+    top: 150px;
+    left: 10px;
+    
+}
+@keyframes apparition-Picto {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+  }
+  @keyframes apparition-Picto2 {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+  }
+  @keyframes apparition-Picto3 {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+  }
+  @keyframes apparition-Picto4 {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .img-Picto{
+
+        max-width: 20%;
+        padding-top: 30px;
+        
+    }
+    .img-picto-group :nth-child(odd){
+        position: initial;
+    }
+    .img-picto-group{
+        
+        flex-wrap: wrap;
+    }
+  }
+
+
+  .title{
+    gap: 10px;
+    color: $blueDenki2;
+    i{
+        font-size: 2.5rem;
+        color: $blueDenki2;
+    }
+  }
+
+#map{
+    height: 250px;
+    width: 25%;
+}
+
+footer{
+    background-color: #000;
+    height: 55vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .gap2{
+        gap: 10px;
+        h2{
+            color: $orangeDenki2;
+            text-shadow: none;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    }
+    ul{
+        list-style: none;
+        text-decoration: none;
+        color: #FFFFFF;
+        li{
+            font-size: 1.5rem;
+            a{
+                text-decoration: none;
+                color: #FFFFFF;
+                &:hover{
+                    color: $orangeDenki2;
+                }
+            }
+        }
+    }
+    
+}
+.rexel{
+    width: 50%;
+}
